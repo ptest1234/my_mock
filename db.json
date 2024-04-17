@@ -3,9 +3,16 @@
     {
       "id": 1,
       "title": "hello"
+    },
+    {
+      "id": 2,
+      "title": "world"
     }
   ],
-  "profile": {
-    "name": "typicode"
+  "get": {
+    "name": "请求成功"
+  },
+  "delete":{
+    "msg":"删除成功！"
   }
 }
