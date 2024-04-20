@@ -24,6 +24,6 @@ class TestPytestDemo:
 		# 断言
 		assert response.status_code == 201
 		print(response.json())
-		assert response.json()['userId'] == '20'
+		assert response.json()['userId'] == '2'
 		assert response.json()['id'] == 3
 		# attach(data=self.driver.get_screenshot_as_png())截图
