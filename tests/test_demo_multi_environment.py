@@ -1,16 +1,21 @@
+import time
+
 import allure
+import pytest
 import requests
 
 
 @allure.feature("多环境测试")
 class TestDemoMultiEnvironment:
 
+    @pytest.mark.Regression
     @allure.story("Test example get endpoint")
     @allure.title("Verify the get API")
     @allure.description("verify the get API response status code and data")
     @allure.severity("blocker")
     def test_get_demo_env(self, env_config, env_request_data, env_response_data):
         # 获取对于环境的数据
+        time.sleep(2)  # 测试并发和串行区别
         base_url = env_config['host']
         get_api = env_config['getAPI']
         get_api_response_data = env_response_data['getAPI']
@@ -21,12 +26,13 @@ class TestDemoMultiEnvironment:
         # 检查响应数据
         assert response.json() == get_api_response_data
 
+    @pytest.mark.Smoke
     @allure.story("Test example POST API")
     @allure.title("Verify the POST API")
     @allure.description("verify the POST API response status code and data")
     @allure.severity("Critical")
     def test_post_demo_env(self, env_config, env_request_data, env_response_data):
-
+        time.sleep(2)  # 测试并发和串行区别
         base_url = env_config['host']
         post_api = env_config['postAPI']
         data = env_request_data['postApi']
