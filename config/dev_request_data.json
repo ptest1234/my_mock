@@ -1,0 +1,8 @@
+{
+  "getApi": "",
+  "postApi": {
+    "title": "foo",
+    "body": "bar",
+    "userId": 1
+  }
+}

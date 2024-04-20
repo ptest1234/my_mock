@@ -1,0 +1,13 @@
+
+{
+    "getAPI": {
+      "id": 1,
+      "title": "hello"
+    },
+    "postAPI":{
+      "title": "foo",
+      "body": "bar",
+      "userId": "1",
+      "id": 3
+    }
+}

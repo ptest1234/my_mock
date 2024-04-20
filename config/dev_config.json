@@ -1,0 +1,5 @@
+{
+  "host": "https://my-json-server.typicode.com/ptest1234/my_mock",
+  "getAPI": "/posts/1",
+  "postAPI":"/posts"
+}
